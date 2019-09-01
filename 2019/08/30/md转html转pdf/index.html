@@ -18,7 +18,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://exiao-duan.github.io/%E5%9B%BE%E7%89%87/%E6%B5%8B%E8%AF%95%E6%88%90%E5%8A%9F.png">
 <meta property="og:image" content="https://exiao-duan.github.io/%E5%9B%BE%E7%89%87/%E9%94%99%E8%AF%AF.png">
-<meta property="og:updated_time" content="2019-08-30T09:21:15.406Z">
+<meta property="og:updated_time" content="2019-09-01T03:40:53.340Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="md转html转pdf">
 <meta name="twitter:description" content="获得md文件">
@@ -189,7 +189,8 @@
 <p>首先用MarkdownPad 2写一个幻灯片稿子   </p>
 <h2 id="Markdown-pandoc-reveal-js做网页PPT（HTML）"><a href="#Markdown-pandoc-reveal-js做网页PPT（HTML）" class="headerlink" title="Markdown+pandoc+reveal.js做网页PPT（HTML）"></a>Markdown+pandoc+reveal.js做网页PPT（HTML）</h2><p>参考链接：<br><a href="https://www.jianshu.com/p/9b71614f57b1" target="_blank" rel="noopener">Markdown+pandoc+reveal.js做网页PPT</a><br><a href="https://linux.cn/article-4080-1.html" target="_blank" rel="noopener">Markdown+Pandoc→HTML幻灯片速成</a>    </p>
 <h2 id="wkhtmltopdf-pdfkit将HTML转PDF"><a href="#wkhtmltopdf-pdfkit将HTML转PDF" class="headerlink" title="wkhtmltopdf+pdfkit将HTML转PDF"></a>wkhtmltopdf+pdfkit将HTML转PDF</h2><p>参考链接：<br><a href="https://blog.csdn.net/qq_41185868/article/details/79907521" target="_blank" rel="noopener">wkhtmltopdf(将html转换成pdf)的利器简介、安装、使用方法详细攻略</a><br><a href="https://blog.csdn.net/xiaoyuan511/article/details/87811081?utm_source=app" target="_blank" rel="noopener">Python快速将HTML转PDF(pdfkit)</a></p>
-<h3 id="还存在的问题"><a href="#还存在的问题" class="headerlink" title="还存在的问题"></a>还存在的问题</h3><p><strong>HTML转pdf时，wkhtmltopdf系统变量设置成功，但没有效果</strong><br>重启后设置回复<br><strong>不是utf-8编码的html无法识别</strong><br>增加了utf-8，变为<code>open(&#39;demo.html&#39;,mode=&#39;r&#39;,encoding=&#39;UTF-8&#39;)</code><br><strong>目前只能通过wkhtmltopdf直接将url链接转为pdf</strong><br>已经可通过Python实现简单的转换，复杂仍报错<br><img src="https://exiao-duan.github.io/%E5%9B%BE%E7%89%87/%E6%B5%8B%E8%AF%95%E6%88%90%E5%8A%9F.png" alt="结果"><br><img src="https://exiao-duan.github.io/%E5%9B%BE%E7%89%87/%E9%94%99%E8%AF%AF.png" alt="仍有的错误">     </p>
+<h3 id="还存在的问题"><a href="#还存在的问题" class="headerlink" title="还存在的问题"></a>还存在的问题</h3><p><strong>HTML转pdf时，wkhtmltopdf系统变量设置成功，但没有效果</strong><br>重启后设置恢复<br><strong>不是utf-8编码的html无法识别</strong><br>增加了utf-8，变为<code>open(&#39;demo.html&#39;,mode=&#39;r&#39;,encoding=&#39;UTF-8&#39;)</code><br><strong>目前只能通过wkhtmltopdf直接将url链接转为pdf</strong><br>已经可通过Python实现简单的转换，复杂仍报错<br><img src="https://exiao-duan.github.io/%E5%9B%BE%E7%89%87/%E6%B5%8B%E8%AF%95%E6%88%90%E5%8A%9F.png" alt="结果"><br><img src="https://exiao-duan.github.io/%E5%9B%BE%E7%89%87/%E9%94%99%E8%AF%AF.png" alt="仍有的错误">     </p>
+<p>###可能的改正方案<br><a href="https://github.com/JazzCore/python-pdfkit/issues/106" target="_blank" rel="noopener">将HTML中的引入css的链接删除，自己定义css位置</a><br>但是由于示例中css文件过多，引入后仍不知道哪里还出错，无法识别  </p>
 
       
 
