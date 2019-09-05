@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="奈何又初年的博客">
 <meta property="og:description" content="1. 两数之和给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个。整数，并返回他们的数组下标。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-05T08:20:45.173Z">
+<meta property="og:updated_time" content="2019-09-05T11:52:10.176Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode刷题">
 <meta name="twitter:description" content="1. 两数之和给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个。整数，并返回他们的数组下标。">
@@ -205,9 +205,49 @@
                 head+=1
             result = nums[sort_id[head]] + nums[sort_id[tail]]
         return [sort_id[head],sort_id[tail]]    </code></pre><h3 id="收获："><a href="#收获：" class="headerlink" title="收获："></a>收获：</h3><ol>
-<li><a href="https://zhuanlan.zhihu.com/p/58579207" target="_blank" rel="noopener">lambda用法</a>   </li>
-<li>思路先排序在寻找   </li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/58579207" target="_blank" rel="noopener">lambda用法</a>   </p>
+</li>
+<li><p>思路先排序在寻找   </p>
+<h2 id="2-两数相加"><a href="#2-两数相加" class="headerlink" title="2. 两数相加"></a>2. 两数相加</h2><p>给出两个<strong>非空</strong>的链表用来表示两个非负的整数。其中，它们各自的位数是按照<strong>逆序</strong>的方式存储的，并且它们的每个节点只能存储<strong>一位</strong>数字。<br>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。<br>您可以假设除了数字<strong>0</strong>之外，这两个数都不会以<strong>0</strong>开头。<br>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>输出：7 -&gt; 0 -&gt; 8<br>原因：342 + 465 = 807    </p>
+<h3 id="解法-1"><a href="#解法-1" class="headerlink" title="解法"></a>解法</h3><p>Definition for singly-linked list.   </p>
+<p> class ListNode:</p>
+<pre><code>def __init__(self, x):
+    self.val = x
+    self.next = None</code></pre><p> class Solution:</p>
+<pre><code>def addTwoNumbers(self, l1, l2) :
+    &apos;&apos;&apos;
+    : type l1: ListNode
+    : type l2: ListNode
+    : rtype : ListNode
+    &apos;&apos;&apos;
+    m,n,s1,s2=0,0,0,0
+    while(l1!=None):
+        a=l1.val
+        l1=l1.next
+        s1=s1+pow(10,m)*a
+           m=m+1
+    while(l2!=None):
+        b=l2.val
+        l2=l2.next
+        s2=s2+pow(10,n)*b
+        n=n+1
+    s=s1+s2
+    re=ListNode(0)
+    r=re
+    while(s&gt;=10):
+        r.next=ListNode(s%10)
+        s=s//10
+        r=r.next
+    r.next=ListNode(s)
+    return re.next</code></pre><h2 id="收获：-1"><a href="#收获：-1" class="headerlink" title="收获："></a>收获：</h2></li>
+<li><p><a href="https://mp.weixin.qq.com/s?src=11&timestamp=1567674159&ver=1833&signature=XmXZUe7GDSe*MLaR0jGXopp1JrcPUbcCYla-*kLnlGITGdNeN2jJfMbHaaIGNXd7NmLpqp6s*tTAvBF5dYkvxcbTMdcDhop78BUMZaGRbebXCEwiYiNHSLEbYiASzQlW&new=1" target="_blank" rel="noopener">python链表创建</a></p>
+</li>
+<li><p>函数返回链表时，可以返回头结点的下一节点  </p>
+</li>
+<li><p><strong>整除</strong><br>我们知道 / 是除的意思，你知道 6/3 等于多少么？你可能会觉得在侮辱你的智商对不对，不是2么？ 在python 中得出的结果是 2.0 ， 也就是它返回的是浮点数。 那么我们只想得到整数部分怎么玩呢？    </p>
+</li>
 </ol>
+<p><strong>用 // 这个 ： 6//3 = 2。</strong></p>
 
       
 
@@ -314,7 +354,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-两数之和"><span class="toc-number">1.</span> <span class="toc-text">1. 两数之和</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解法"><span class="toc-number">1.1.</span> <span class="toc-text">解法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#收获："><span class="toc-number">1.2.</span> <span class="toc-text">收获：</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-两数之和"><span class="toc-number">1.</span> <span class="toc-text">1. 两数之和</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解法"><span class="toc-number">1.1.</span> <span class="toc-text">解法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#收获："><span class="toc-number">1.2.</span> <span class="toc-text">收获：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-两数相加"><span class="toc-number">2.</span> <span class="toc-text">2. 两数相加</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解法-1"><span class="toc-number">2.1.</span> <span class="toc-text">解法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#收获：-1"><span class="toc-number">3.</span> <span class="toc-text">收获：</span></a></li></ol>
                     </div>
                 </span>
             </div>
