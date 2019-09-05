@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="奈何又初年的博客">
 <meta property="og:description" content="1. 两数之和给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个。整数，并返回他们的数组下标。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-05T11:52:10.176Z">
+<meta property="og:updated_time" content="2019-09-05T12:07:26.958Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode刷题">
 <meta name="twitter:description" content="1. 两数之和给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个。整数，并返回他们的数组下标。">
@@ -204,16 +204,15 @@
             elif result &lt; target:
                 head+=1
             result = nums[sort_id[head]] + nums[sort_id[tail]]
-        return [sort_id[head],sort_id[tail]]    </code></pre><h3 id="收获："><a href="#收获：" class="headerlink" title="收获："></a>收获：</h3><ol>
+        return [sort_id[head],sort_id[tail]]    </code></pre><h3 id="收获："><a href="#收获：" class="headerlink" title="收获："></a>收获：</h3><ul>
 <li><p><a href="https://zhuanlan.zhihu.com/p/58579207" target="_blank" rel="noopener">lambda用法</a>   </p>
 </li>
 <li><p>思路先排序在寻找   </p>
 <h2 id="2-两数相加"><a href="#2-两数相加" class="headerlink" title="2. 两数相加"></a>2. 两数相加</h2><p>给出两个<strong>非空</strong>的链表用来表示两个非负的整数。其中，它们各自的位数是按照<strong>逆序</strong>的方式存储的，并且它们的每个节点只能存储<strong>一位</strong>数字。<br>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。<br>您可以假设除了数字<strong>0</strong>之外，这两个数都不会以<strong>0</strong>开头。<br>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>输出：7 -&gt; 0 -&gt; 8<br>原因：342 + 465 = 807    </p>
-<h3 id="解法-1"><a href="#解法-1" class="headerlink" title="解法"></a>解法</h3><p>Definition for singly-linked list.   </p>
-<p> class ListNode:</p>
+<h3 id="解法-1"><a href="#解法-1" class="headerlink" title="解法"></a>解法</h3><p>  class ListNode:</p>
 <pre><code>def __init__(self, x):
     self.val = x
-    self.next = None</code></pre><p> class Solution:</p>
+    self.next = None</code></pre><p>  class Solution:</p>
 <pre><code>def addTwoNumbers(self, l1, l2) :
     &apos;&apos;&apos;
     : type l1: ListNode
@@ -246,8 +245,9 @@
 </li>
 <li><p><strong>整除</strong><br>我们知道 / 是除的意思，你知道 6/3 等于多少么？你可能会觉得在侮辱你的智商对不对，不是2么？ 在python 中得出的结果是 2.0 ， 也就是它返回的是浮点数。 那么我们只想得到整数部分怎么玩呢？    </p>
 </li>
-</ol>
-<p><strong>用 // 这个 ： 6//3 = 2。</strong></p>
+<li><p><em>用 // 这个 ： 6//3 = 2。*</em></p>
+</li>
+</ul>
 
       
 
