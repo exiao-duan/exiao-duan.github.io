@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>LeetCode刷题2 | 奈何又初年的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。">
+  <meta name="description" content="无重复字符的最长子串给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。">
 <meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode刷题2">
 <meta property="og:url" content="http://yoursite.com/2019/09/06/LeetCode刷题2/index.html">
 <meta property="og:site_name" content="奈何又初年的博客">
-<meta property="og:description" content="给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。">
+<meta property="og:description" content="无重复字符的最长子串给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-06T02:45:39.147Z">
+<meta property="og:updated_time" content="2019-09-06T03:26:08.179Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode刷题2">
-<meta name="twitter:description" content="给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。">
+<meta name="twitter:description" content="无重复字符的最长子串给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。">
   
     <link rel="alternative" href="/atom.xml" title="奈何又初年的博客" type="application/atom+xml">
   
@@ -182,7 +182,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>给定一个字符串，请你找出其中不含有重复字符的<strong>最长子串</strong>的长度。   </p>
+        <h2 id="无重复字符的最长子串"><a href="#无重复字符的最长子串" class="headerlink" title="无重复字符的最长子串"></a>无重复字符的最长子串</h2><p>给定一个字符串，请你找出其中不含有重复字符的<strong>最长子串</strong>的长度。   </p>
 <a id="more"></a>
 <p>输入: “abcabcbb”<br>输出: 3<br>解释: 因为无重复字符的最长子串是 “abc”，所以其长度为 3。<br>输入: “pwwkew”<br>输出: 3<br>解释: 因为无重复字符的最长子串是 “wke”，所以其长度为 3。<br><strong>请注意，你的答案必须是 子串 的长度，”pwke” 是一个子序列，不是子串。</strong>      </p>
 <pre><code>class Solution:
@@ -199,9 +199,39 @@
             re=max(re,j+1-i)
             st[s[j]]=j+1  #记录键的值
            return re</code></pre><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
-<li>集合的使用</li>
-<li><a href="https://zhuanlan.zhihu.com/p/30754905" target="_blank" rel="noopener">集合与字典区别，集合的键可以是字母</a>   </li>
-<li><a href="https://zhuanlan.zhihu.com/p/29038946" target="_blank" rel="noopener">字符串常用操作</a></li>
+<li><p>集合的使用</p>
+</li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/30754905" target="_blank" rel="noopener">集合与字典区别，集合的键可以是字母</a>   </p>
+</li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/29038946" target="_blank" rel="noopener">字符串常用操作</a>     </p>
+<h2 id="寻找两个有序数组的中位数"><a href="#寻找两个有序数组的中位数" class="headerlink" title="寻找两个有序数组的中位数"></a>寻找两个有序数组的中位数</h2><p>给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。<br>请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。<br>你可以假设 nums1 和 nums2 不会同时为空。<br>nums1 = [1, 2]<br>nums2 = [3, 4]<br>则中位数是 (2 + 3)/2 = 2.5   </p>
+<p>  class Solution:</p>
+<pre><code>def findMedianSortedArrays(self, nums1, nums2):
+    &apos;&apos;&apos;
+    :type nums1: List[int] 
+    :type nums2: List[int]
+    :rtype :float
+    &apos;&apos;&apos;
+    l=[]
+    a,b=0,0
+    while(a&lt;len(nums1) and b&lt;len(nums2)):
+        if(nums1[a]&lt;=nums2[b]):
+            l.append(nums1[a])
+            a=a+1
+        else:
+            l.append(nums2[b])
+            b=b+1
+    if(a==len(nums1)):
+        l.extend(nums2[b:])
+    else:
+        l.extend(nums1[a:])
+    c=len(l)//2
+    half=(l[c]+l[~c])/2
+    return half   </code></pre><h2 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h2></li>
+<li><p><a href="https://www.cnblogs.com/s-1314-521/p/9771478.html" target="_blank" rel="noopener">中位数求法</a> </p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s?src=11&timestamp=1567738738&ver=1835&signature=spOpc2KCU2KlHZVPGYGiTsxcUWDqPJlxLHMqh6-C0Yuwx9kuaApnrcvnhbA9pa5RjuUzfY*6SETLh7eR1cR1yHHOuI7LqhNQU*zxyT73xjDzzcjtKNPLtvjU7iHoudbo&new=1" target="_blank" rel="noopener">列表操作</a></p>
+</li>
 </ul>
 
       
@@ -288,7 +318,7 @@
   
   
     <a href="/2019/09/05/LeetCode刷题1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">LeetCode刷题</div>
+      <div class="article-nav-title">LeetCode刷题1</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -315,7 +345,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#注意"><span class="toc-number">1.</span> <span class="toc-text">注意</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#无重复字符的最长子串"><span class="toc-number">1.</span> <span class="toc-text">无重复字符的最长子串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意"><span class="toc-number">2.</span> <span class="toc-text">注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#寻找两个有序数组的中位数"><span class="toc-number">3.</span> <span class="toc-text">寻找两个有序数组的中位数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意-1"><span class="toc-number">4.</span> <span class="toc-text">注意</span></a></li></ol>
                     </div>
                 </span>
             </div>
