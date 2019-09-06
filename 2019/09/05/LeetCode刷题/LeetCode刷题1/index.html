@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>LeetCode刷题2 | 奈何又初年的博客</title>
+  <title>LeetCode刷题1 | 奈何又初年的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="无重复字符的最长子串给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="1. 两数之和给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个。整数，并返回他们的数组下标。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode刷题2">
-<meta property="og:url" content="http://yoursite.com/2019/09/06/LeetCode刷题2/index.html">
+<meta property="og:title" content="LeetCode刷题1">
+<meta property="og:url" content="http://yoursite.com/2019/09/05/LeetCode刷题/LeetCode刷题1/index.html">
 <meta property="og:site_name" content="奈何又初年的博客">
-<meta property="og:description" content="无重复字符的最长子串给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。">
+<meta property="og:description" content="1. 两数之和给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个。整数，并返回他们的数组下标。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-06T03:26:08.179Z">
+<meta property="og:updated_time" content="2019-09-06T03:46:10.612Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode刷题2">
-<meta name="twitter:description" content="无重复字符的最长子串给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。">
+<meta name="twitter:title" content="LeetCode刷题1">
+<meta name="twitter:description" content="1. 两数之和给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个。整数，并返回他们的数组下标。">
   
     <link rel="alternative" href="/atom.xml" title="奈何又初年的博客" type="application/atom+xml">
   
@@ -162,76 +161,52 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-LeetCode刷题2" class="article article-type-post " itemscope itemprop="blogPost">
+  <i class="fa fa-thumb-tack"></i>
+  <font color=7D26CD>置顶</font>
+  <span class="post-meta-divider">|</span>
+
+<article id="post-LeetCode刷题/LeetCode刷题1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      LeetCode刷题2
+      LeetCode刷题1
     </h1>
   
 
         
-        <a href="/2019/09/06/LeetCode刷题2/" class="archive-article-date">
-  	<time datetime="2019-09-06T02:37:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
+        <a href="/2019/09/05/LeetCode刷题/LeetCode刷题1/" class="archive-article-date">
+  	<time datetime="2019-09-05T08:12:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="无重复字符的最长子串"><a href="#无重复字符的最长子串" class="headerlink" title="无重复字符的最长子串"></a>无重复字符的最长子串</h2><p>给定一个字符串，请你找出其中不含有重复字符的<strong>最长子串</strong>的长度。   </p>
-<a id="more"></a>
-<p>输入: “abcabcbb”<br>输出: 3<br>解释: 因为无重复字符的最长子串是 “abc”，所以其长度为 3。<br>输入: “pwwkew”<br>输出: 3<br>解释: 因为无重复字符的最长子串是 “wke”，所以其长度为 3。<br><strong>请注意，你的答案必须是 子串 的长度，”pwke” 是一个子序列，不是子串。</strong>      </p>
-<pre><code>class Solution:
-    def lengthOfLongestSubstring(self, s):
+        <h2 id="1-两数之和"><a href="#1-两数之和" class="headerlink" title="1. 两数之和"></a>1. 两数之和</h2><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个。整数，并返回他们的数组下标。  </p>
+<a id="more"></a>   
+<p>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。<br>给定 nums = [2, 7, 11, 15], target = 9。因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p>
+<h3 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h3><pre><code>class Solution:
+    def twoSum(self, nums, target):
+        &apos;&apos;&apos;:type nums: List[int]
+        :type target: int
+        :rtype: List[int]
         &apos;&apos;&apos;
-        : type s: str
-        : rtype: int
-        &apos;&apos;&apos; 
-        st={}
-        re,i=0,0
-        for j in range(len(s)):
-            if s[j] in st:
-                i=max(st[s[j]],i)  #有重复将i后移
-            re=max(re,j+1-i)
-            st[s[j]]=j+1  #记录键的值
-           return re</code></pre><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
-<li><p>集合的使用</p>
-</li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/30754905" target="_blank" rel="noopener">集合与字典区别，集合的键可以是字母</a>   </p>
-</li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/29038946" target="_blank" rel="noopener">字符串常用操作</a>     </p>
-<h2 id="寻找两个有序数组的中位数"><a href="#寻找两个有序数组的中位数" class="headerlink" title="寻找两个有序数组的中位数"></a>寻找两个有序数组的中位数</h2><p>给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。<br>请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。<br>你可以假设 nums1 和 nums2 不会同时为空。<br>nums1 = [1, 2]<br>nums2 = [3, 4]<br>则中位数是 (2 + 3)/2 = 2.5   </p>
-<p>  class Solution:</p>
-<pre><code>def findMedianSortedArrays(self, nums1, nums2):
-    &apos;&apos;&apos;
-    :type nums1: List[int] 
-    :type nums2: List[int]
-    :rtype :float
-    &apos;&apos;&apos;
-    l=[]
-    a,b=0,0
-    while(a&lt;len(nums1) and b&lt;len(nums2)):
-        if(nums1[a]&lt;=nums2[b]):
-            l.append(nums1[a])
-            a=a+1
-        else:
-            l.append(nums2[b])
-            b=b+1
-    if(a==len(nums1)):
-        l.extend(nums2[b:])
-    else:
-        l.extend(nums1[a:])
-    c=len(l)//2
-    half=(l[c]+l[~c])/2
-    return half   </code></pre><h2 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h2></li>
-<li><p><a href="https://www.cnblogs.com/s-1314-521/p/9771478.html" target="_blank" rel="noopener">中位数求法</a> </p>
-</li>
-<li><p><a href="https://mp.weixin.qq.com/s?src=11&timestamp=1567738738&ver=1835&signature=spOpc2KCU2KlHZVPGYGiTsxcUWDqPJlxLHMqh6-C0Yuwx9kuaApnrcvnhbA9pa5RjuUzfY*6SETLh7eR1cR1yHHOuI7LqhNQU*zxyT73xjDzzcjtKNPLtvjU7iHoudbo&new=1" target="_blank" rel="noopener">列表操作</a></p>
-</li>
+        sort_id = sorted(range(len(nums)),key=lambda k : nums[k])
+           head = 0
+        tail = len(nums)-1
+        result = nums[sort_id[head]] + nums[sort_id[tail]] 
+        while(result!=target):
+            if result &gt; target:
+                tail-=1
+            elif result &lt; target:
+                head+=1
+            result = nums[sort_id[head]] + nums[sort_id[tail]]
+        return [sort_id[head],sort_id[tail]]    </code></pre><h3 id="收获："><a href="#收获：" class="headerlink" title="收获："></a>收获：</h3><ul>
+<li><a href="https://zhuanlan.zhihu.com/p/58579207" target="_blank" rel="noopener">lambda用法</a>   </li>
+<li>思路先排序在寻找   </li>
 </ul>
 
       
@@ -240,18 +215,12 @@
     </div>
     <div class="article-info article-info-index">
       
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
+      
       
 
       
@@ -302,7 +271,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://exiao-duan.github.io/2019/09/06/LeetCode刷题2/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://exiao-duan.github.io/2019/09/05/LeetCode刷题/LeetCode刷题1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -316,9 +285,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/09/06/LeetCode刷题/LeetCode刷题3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          LeetCode刷题3
+        
+      </div>
+    </a>
   
-    <a href="/2019/09/05/LeetCode刷题1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">LeetCode刷题1</div>
+  
+    <a href="/2019/09/02/课程/电磁场与波/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">电磁场与波</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -345,7 +323,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#无重复字符的最长子串"><span class="toc-number">1.</span> <span class="toc-text">无重复字符的最长子串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意"><span class="toc-number">2.</span> <span class="toc-text">注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#寻找两个有序数组的中位数"><span class="toc-number">3.</span> <span class="toc-text">寻找两个有序数组的中位数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意-1"><span class="toc-number">4.</span> <span class="toc-text">注意</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-两数之和"><span class="toc-number">1.</span> <span class="toc-text">1. 两数之和</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解法"><span class="toc-number">1.1.</span> <span class="toc-text">解法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#收获："><span class="toc-number">1.2.</span> <span class="toc-text">收获：</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

@@ -158,19 +158,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-电磁场与波" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-课程/电磁场与波" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/02/电磁场与波/">电磁场与波</a>
+      <a class="article-title" href="/2019/09/02/课程/电磁场与波/">电磁场与波</a>
     </h1>
   
 
         
-        <a href="/2019/09/02/电磁场与波/" class="archive-article-date">
+        <a href="/2019/09/02/课程/电磁场与波/" class="archive-article-date">
   	<time datetime="2019-09-02T10:54:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
 </a>
         
@@ -197,7 +197,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/02/电磁场与波/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/02/课程/电磁场与波/">展开全文 >></a>
         </p>
       
 
@@ -227,19 +227,217 @@
 
 
   
-    <article id="post-LeetCode刷题2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-LeetCode刷题/LeetCode刷题4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/06/LeetCode刷题2/">LeetCode刷题2</a>
+      <a class="article-title" href="/2019/09/06/LeetCode刷题/LeetCode刷题4/">LeetCode刷题4</a>
     </h1>
   
 
         
-        <a href="/2019/09/06/LeetCode刷题2/" class="archive-article-date">
+        <a href="/2019/09/06/LeetCode刷题/LeetCode刷题4/" class="archive-article-date">
+  	<time datetime="2019-09-06T03:44:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="寻找两个有序数组的中位数"><a href="#寻找两个有序数组的中位数" class="headerlink" title="寻找两个有序数组的中位数"></a>寻找两个有序数组的中位数</h2><p>给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。<br>请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。<br>你可以假设 nums1 和 nums2 不会同时为空。<br>nums1 = [1, 2]<br>nums2 = [3, 4]<br>则中位数是 (2 + 3)/2 = 2.5   </p>
+<pre><code>class Solution:
+    def findMedianSortedArrays(self, nums1, nums2):
+        &apos;&apos;&apos;
+        :type nums1: List[int] 
+        :type nums2: List[int]
+        :rtype :float
+        &apos;&apos;&apos;
+        l=[]
+        a,b=0,0
+        while(a&lt;len(nums1) and b&lt;len(nums2)):
+            if(nums1[a]&lt;=nums2[b]):
+                l.append(nums1[a])
+                a=a+1
+            else:
+                l.append(nums2[b])
+                b=b+1
+        if(a==len(nums1)):
+            l.extend(nums2[b:])
+        else:
+            l.extend(nums1[a:])
+        c=len(l)//2
+        half=(l[c]+l[~c])/2
+        return half   </code></pre><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li><a href="https://www.cnblogs.com/s-1314-521/p/9771478.html" target="_blank" rel="noopener">中位数求法</a> </li>
+<li><a href="https://mp.weixin.qq.com/s?src=11&timestamp=1567738738&ver=1835&signature=spOpc2KCU2KlHZVPGYGiTsxcUWDqPJlxLHMqh6-C0Yuwx9kuaApnrcvnhbA9pa5RjuUzfY*6SETLh7eR1cR1yHHOuI7LqhNQU*zxyT73xjDzzcjtKNPLtvjU7iHoudbo&new=1" target="_blank" rel="noopener">列表操作</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/06/LeetCode刷题/LeetCode刷题4/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-LeetCode刷题/LeetCode刷题2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/06/LeetCode刷题/LeetCode刷题2/">LeetCode刷题2</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/06/LeetCode刷题/LeetCode刷题2/" class="archive-article-date">
+  	<time datetime="2019-09-06T03:43:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="2-两数相加"><a href="#2-两数相加" class="headerlink" title="2. 两数相加"></a>2. 两数相加</h2><p>给出两个<strong>非空</strong>的链表用来表示两个非负的整数。其中，它们各自的位数是按照<strong>逆序</strong>的方式存储的，并且它们的每个节点只能存储<strong>一位</strong>数字。<br>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。<br>您可以假设除了数字<strong>0</strong>之外，这两个数都不会以<strong>0</strong>开头。<br>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>输出：7 -&gt; 0 -&gt; 8<br>原因：342 + 465 = 807    </p>
+<h3 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h3><pre><code>class ListNode:
+    def __init__(self, x):
+         self.val = x
+         self.next = None
+
+class Solution:
+    def addTwoNumbers(self, l1, l2) :
+        &apos;&apos;&apos;
+        : type l1: ListNode
+        : type l2: ListNode
+        : rtype : ListNode
+        &apos;&apos;&apos;
+        m,n,s1,s2=0,0,0,0
+        while(l1!=None):
+            a=l1.val
+            l1=l1.next
+            s1=s1+pow(10,m)*a
+            m=m+1
+        while(l2!=None):
+            b=l2.val
+            l2=l2.next
+            s2=s2+pow(10,n)*b
+            n=n+1
+        s=s1+s2
+        re=ListNode(0)
+        r=re
+        while(s&gt;=10):
+            r.next=ListNode(s%10)
+            s=s//10
+            r=r.next
+        r.next=ListNode(s)
+        return re.next</code></pre><h2 id="收获："><a href="#收获：" class="headerlink" title="收获："></a>收获：</h2><ul>
+<li><a href="https://mp.weixin.qq.com/s?src=11&timestamp=1567674159&ver=1833&signature=XmXZUe7GDSe*MLaR0jGXopp1JrcPUbcCYla-*kLnlGITGdNeN2jJfMbHaaIGNXd7NmLpqp6s*tTAvBF5dYkvxcbTMdcDhop78BUMZaGRbebXCEwiYiNHSLEbYiASzQlW&new=1" target="_blank" rel="noopener">python链表创建</a></li>
+<li>函数返回链表时，可以返回头结点的下一节点  </li>
+<li>整除<br>我们知道 / 是除的意思，你知道 6/3 等于多少么？你可能会觉得在侮辱你的智商对不对，不是2么？ 在python 中得出的结果是 2.0 ， 也就是它返回的是浮点数。 那么我们只想得到整数部分怎么玩呢？<br>用 // 这个 ： 6//3 = 2。</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/06/LeetCode刷题/LeetCode刷题2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-LeetCode刷题/LeetCode刷题3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/06/LeetCode刷题/LeetCode刷题3/">LeetCode刷题3</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/06/LeetCode刷题/LeetCode刷题3/" class="archive-article-date">
   	<time datetime="2019-09-06T02:37:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
 </a>
         
@@ -255,23 +453,17 @@
     </div>
     <div class="article-info article-info-index">
       
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
+      
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/06/LeetCode刷题2/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/06/LeetCode刷题/LeetCode刷题3/">展开全文 >></a>
         </p>
       
 
@@ -301,19 +493,19 @@
 
 
   
-    <article id="post-LeetCode刷题1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-LeetCode刷题/LeetCode刷题1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/05/LeetCode刷题1/">LeetCode刷题1</a>
+      <a class="article-title" href="/2019/09/05/LeetCode刷题/LeetCode刷题1/">LeetCode刷题1</a>
     </h1>
   
 
         
-        <a href="/2019/09/05/LeetCode刷题1/" class="archive-article-date">
+        <a href="/2019/09/05/LeetCode刷题/LeetCode刷题1/" class="archive-article-date">
   	<time datetime="2019-09-05T08:12:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
 </a>
         
@@ -329,23 +521,17 @@
     </div>
     <div class="article-info article-info-index">
       
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
+      
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/05/LeetCode刷题1/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/05/LeetCode刷题/LeetCode刷题1/">展开全文 >></a>
         </p>
       
 
@@ -375,19 +561,19 @@
 
 
   
-    <article id="post-md转html转pdf" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-随笔/md转html转pdf" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/30/md转html转pdf/">md转html转pdf</a>
+      <a class="article-title" href="/2019/08/30/随笔/md转html转pdf/">md转html转pdf</a>
     </h1>
   
 
         
-        <a href="/2019/08/30/md转html转pdf/" class="archive-article-date">
+        <a href="/2019/08/30/随笔/md转html转pdf/" class="archive-article-date">
   	<time datetime="2019-08-30T02:20:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
 </a>
         
@@ -419,7 +605,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/30/md转html转pdf/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/30/随笔/md转html转pdf/">展开全文 >></a>
         </p>
       
 
@@ -449,19 +635,19 @@
 
 
   
-    <article id="post-markdown_keys_record" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-随笔/markdown_keys_record" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/29/markdown_keys_record/">markdown_keys_record</a>
+      <a class="article-title" href="/2019/08/29/随笔/markdown_keys_record/">markdown_keys_record</a>
     </h1>
   
 
         
-        <a href="/2019/08/29/markdown_keys_record/" class="archive-article-date">
+        <a href="/2019/08/29/随笔/markdown_keys_record/" class="archive-article-date">
   	<time datetime="2019-08-29T03:45:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-29</time>
 </a>
         
@@ -493,7 +679,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/29/markdown_keys_record/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/29/随笔/markdown_keys_record/">展开全文 >></a>
         </p>
       
 
@@ -523,19 +709,19 @@
 
 
   
-    <article id="post-创建博客过程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-随笔/创建博客过程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/28/创建博客过程/">创建博客过程</a>
+      <a class="article-title" href="/2019/08/28/随笔/创建博客过程/">创建博客过程</a>
     </h1>
   
 
         
-        <a href="/2019/08/28/创建博客过程/" class="archive-article-date">
+        <a href="/2019/08/28/随笔/创建博客过程/" class="archive-article-date">
   	<time datetime="2019-08-28T13:38:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-28</time>
 </a>
         
@@ -552,11 +738,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/28/创建博客过程/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/28/随笔/创建博客过程/">展开全文 >></a>
         </p>
       
 
@@ -586,19 +783,19 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-随笔/hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/27/hello-world/">Hello World</a>
+      <a class="article-title" href="/2019/08/27/随笔/hello-world/">Hello World</a>
     </h1>
   
 
         
-        <a href="/2019/08/27/hello-world/" class="archive-article-date">
+        <a href="/2019/08/27/随笔/hello-world/" class="archive-article-date">
   	<time datetime="2019-08-27T11:31:47.416Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-27</time>
 </a>
         
@@ -630,7 +827,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/27/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/27/随笔/hello-world/">展开全文 >></a>
         </p>
       
 
