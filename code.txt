@@ -1,0 +1,27 @@
+## Quick Start
+$ hexo clean
+### Create a new post
+``` bash
+$ hexo new "My New Post"
+```
+More info: [Writing](https://hexo.io/docs/writing.html)
+``` bash
+$ hexo server
+```
+### Run server
+More info: [Server](https://hexo.io/docs/server.html)
+### Generate static files
+``` bash
+$ hexo generate
+```
+More info: [Generating](https://hexo.io/docs/generating.html)
+### Deploy to remote sites
+``` bash
+$ hexo deploy
+```
+More info: [Deployment](https://hexo.io/docs/deployment.html)
+[1]:https://hexo.io/zh-cn/docs/writing
+文章设置优先级：top: 10(空格注意)
+hexo clean && hexo g -d
+问题1：hexo s变化，blog不变
+注意：github上默认分支，时间长的话，GitHub更新则分支有时会变化
